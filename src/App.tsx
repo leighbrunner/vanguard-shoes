@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Shoes from './pages/Shoes';
 import ETF from './pages/ETF';
 import About from './pages/About';
+import AddShoeForm from './pages/admin/AddShoeForm';
+import AdminProtected from './components/admin/AdminProtected';
 import './App.css';
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
             <Route path="/shoes" element={<Shoes />} />
             <Route path="/etf" element={<ETF />} />
             <Route path="/about" element={<About />} />
+            <Route path="/admin/add-shoe" element={<AdminProtected><AddShoeForm /></AdminProtected>} />
           </Routes>
         </main>
         <Footer />

@@ -38,6 +38,9 @@ const Navbar: React.FC = () => {
             <Link to="/about" className={isActive('/about')}>
               About
             </Link>
+            <Link to="/admin/add-shoe" className={isActive('/admin/add-shoe')}>
+              Admin
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -77,6 +80,12 @@ const Navbar: React.FC = () => {
             className={isActive('/about')}
           >
             About
+          </Link>
+          <Link
+            to="/admin/add-shoe"
+            className={isActive('/admin/add-shoe')}
+          >
+            Admin
           </Link>
         </div>
       </div>
