@@ -306,3 +306,86 @@ nav a.active {
     display: none !important;
   }
 }
+
+/* Tab Navigation Styling */
+.tab-navigation {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.tab-navigation::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.tab-button {
+  background-color: var(--vanguard-red);
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 4px 4px 0 0;
+  margin-right: 2px;
+  position: relative;
+  outline: none;
+}
+
+.tab-button:hover {
+  background-color: var(--vanguard-dark-red);
+}
+
+.tab-button.active {
+  background-color: #a31419;
+  position: relative;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: white;
+}
+
+/* Tab content container */
+.tab-content {
+  padding: 1.5rem 0;
+}
+
+/* Override specific ETF page tab navigation */
+.etf-tabs .tab-button {
+  min-width: 120px;
+  text-align: center;
+}
+
+/* ETF Page Specific Styles */
+.ticker-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab-container {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}

@@ -199,16 +199,12 @@ const ETF: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-vanguard-navy text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="hero">
+        <div className="container">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Vanguard Crypto20 ETF
-            </h1>
-            <div className="bg-white/10 inline-block px-4 py-1 rounded-full text-sm font-medium mb-6">
-              Ticker: VCRYP
-            </div>
-            <p className="text-xl max-w-3xl mx-auto">
+            <h1>Vanguard Crypto20 ETF</h1>
+            <div className="ticker-badge">Ticker: VCRYP</div>
+            <p className="hero-description">
               Our newest ETF tracks the performance of the top 20 cryptocurrencies by market capitalization
             </p>
           </div>
@@ -216,36 +212,24 @@ const ETF: React.FC = () => {
       </section>
 
       {/* ETF Details Tabs */}
-      <section className="py-8 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap border-b">
+      <section className="tab-container">
+        <div className="container">
+          <div className="tab-navigation etf-tabs">
             <button
               onClick={() => setActiveTab('overview')}
-              className={`px-6 py-3 font-medium text-sm ${
-                activeTab === 'overview'
-                  ? 'text-vanguard-red border-b-2 border-vanguard-red'
-                  : 'text-gray-500 hover:text-vanguard-navy'
-              }`}
+              className={`tab-button ${activeTab === 'overview' ? 'active' : ''}`}
             >
               Overview
             </button>
             <button
               onClick={() => setActiveTab('holdings')}
-              className={`px-6 py-3 font-medium text-sm ${
-                activeTab === 'holdings'
-                  ? 'text-vanguard-red border-b-2 border-vanguard-red'
-                  : 'text-gray-500 hover:text-vanguard-navy'
-              }`}
+              className={`tab-button ${activeTab === 'holdings' ? 'active' : ''}`}
             >
               Holdings
             </button>
             <button
               onClick={() => setActiveTab('performance')}
-              className={`px-6 py-3 font-medium text-sm ${
-                activeTab === 'performance'
-                  ? 'text-vanguard-red border-b-2 border-vanguard-red'
-                  : 'text-gray-500 hover:text-vanguard-navy'
-              }`}
+              className={`tab-button ${activeTab === 'performance' ? 'active' : ''}`}
             >
               Performance
             </button>
